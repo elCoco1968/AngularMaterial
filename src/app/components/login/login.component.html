@@ -1,0 +1,26 @@
+<div class="body d-flex justify-content-center align-items-center ">
+    <div class="login">
+      <!-- Ponemos que el spinner nos salga cuando sea verdadero y el formulario que solo este cuando loading sea falso -->
+      <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+        <!-- Ya entrelazamos el formulario -->
+        <!-- Cuando le demos al submit del btn vamos a llamar al metodo ingresar() -->
+        <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()" >
+            <img src="../../../assets/img/usuario.png" width= "50%">
+        <h1 >Login</h1>
+        <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Usuario</mat-label>
+            <!-- Para entrelazar los inputs con el ts, utilizamos el formControlName -->
+            <!--  -->
+            <input matInput formControlName="usuario">
+          </mat-form-field>
+          <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput formControlName="contraseña">
+          </mat-form-field>
+          <!-- Desabilitamos el btn hasta que sea diferente a invalido -->
+          <button type="submit" mat-raised-button color="primary" class="button" [disabled]="form.invalid">Ingresar</button>
+        </form>
+    </div>
+</div>
+
+

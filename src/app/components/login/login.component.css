@@ -1,0 +1,19 @@
+.body{
+    background-color: rgb(238, 238, 238);
+    height: 100%;
+}
+.login{
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+}
+.ancho{
+    width: 80%;
+}
+.button{
+    height: 50px;
+    width: 80%;
+}
+.spinner{
+    margin: 0 auto;
+}

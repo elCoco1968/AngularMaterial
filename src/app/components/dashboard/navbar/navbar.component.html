@@ -1,0 +1,16 @@
+<p>
+    <mat-toolbar color="primary"> 
+      <span>AppUsers</span>
+      <!-- Buttons a la derecha -->
+      <span class="example-spacer"></span>
+      <!-- Con el ngFor creamos el numero de botones que tenemos en nuestro backend utilizando el {{pasamos ruta y nombre}} -->
+      <button *ngFor="let item of menu" mat-button routerLink="{{item.redirect}}">{{item.nombre}}</button>
+      <!-- Si ponemos la clase abajo tambien, nos centrara los items -->
+      <span class="example-spacer"></span>
+      <!-- Nos sale error de que mat-Icon no existe, lo tenemos que importar el icon-->
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+ 
