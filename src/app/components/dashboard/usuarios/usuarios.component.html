@@ -1,6 +1,11 @@
 <div class="container">
     <mat-toolbar>
         <span>Usuarios</span>
+
+        <div class="example-spacer text-end">
+          <button mat-button color="primary" routerLink="/dashboard/crearUsuario" >Agregar</button>
+        </div>
+        
       </mat-toolbar>
 <div *ngIf="listUsuarios.length > 0">
   <mat-form-field>
@@ -47,7 +52,7 @@
           <a class="pointer"  matTooltip="Ver usuario">
             <mat-icon>search</mat-icon>
           </a>  
-          <a class="pointer"  matTooltip="Editar usuario">
+          <a class="pointer"  matTooltip="Editar usuario" routerLink="/dashboard/editarUsuario">
             <mat-icon>edit</mat-icon>
           </a> 
           <a class="pointer"  matTooltip="Eliminar usuario" (click)="eliminarUsuario(i)">

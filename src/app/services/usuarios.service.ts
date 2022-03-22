@@ -7,12 +7,12 @@ import { Usuario } from '../interfaces/usuario';
 export class UsuariosService {
 
   listUsuarios: Usuario[] = [
-    { usuario: 1, nombre: 'Kevin', apellido: 'Morales', sexo: 'H' },
-    { usuario: 2, nombre: 'Janeth', apellido: 'Gomez', sexo: 'He' },
-    { usuario: 3, nombre: 'Alfredo', apellido: 'Morales', sexo: 'Li' },
-    { usuario: 4, nombre: 'Maria', apellido: 'Gomez', sexo: 'Be' },
-    { usuario: 5, nombre: 'Boron', apellido: 'Saturno', sexo: 'B' },
-    { usuario: 6, nombre: 'Carbon', apellido: 'Saturno', sexo: 'C' },
+    { usuario: 1, nombre: 'Kevin', apellido: 'Morales', sexo: 'MASCULINO' },
+    { usuario: 2, nombre: 'Janeth', apellido: 'Gomez', sexo: 'FEMENINO' },
+    { usuario: 3, nombre: 'Alfredo', apellido: 'Morales', sexo: 'MASCULINO' },
+    { usuario: 4, nombre: 'Maria', apellido: 'Gomez', sexo: 'FEMENINO' },
+    { usuario: 5, nombre: 'Boron', apellido: 'Saturno', sexo: 'FEMENINO' },
+    { usuario: 6, nombre: 'Carbon', apellido: 'Saturno', sexo: 'FEMENINO' },
     { usuario: 7, nombre: 'Nitrogen', apellido: 'Saturno', sexo: 'N' },
     { usuario: 8, nombre: 'Oxygen', apellido: 'Saturno', sexo: 'O' },
     { usuario: 9, nombre: 'Fluorine', apellido: 'Saturno', sexo: 'F' },
@@ -28,4 +28,9 @@ export class UsuariosService {
   eliminarUsuario(index : number){
     this.listUsuarios.splice(index, 1);
   }
+
+  aggUsuario(user : Usuario){
+    this.listUsuarios.unshift(user)
+  }
+  
 }
